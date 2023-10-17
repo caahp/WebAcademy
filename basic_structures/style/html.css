@@ -1,7 +1,29 @@
 body {
-    background-color: #9bd8da;
+    background-color: #9825bb;
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 0;
     display: center;
   }
+
+h1 {
+    background-color: #aa20fa;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+p {
+  color: white;
+}
+
+b {
+  color: #340450;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+img {
+  height: 55px;
+  position: absolute;
+}

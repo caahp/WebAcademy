@@ -5,3 +5,12 @@ body {
   padding: 0;
   display: center;
 }
+
+.header{
+  color: white;
+}
+
+a { 
+  color:black;
+  font-weight: bold;
+}

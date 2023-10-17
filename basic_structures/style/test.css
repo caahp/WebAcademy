@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    background-color: bisque;
+    padding: 0px;
+    height: 180vh;
+    width: 240vh;
+}
+
+.pai {
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    margin: 150px;
+    border: 1px solid black;
+    border-radius: 10px;;
+}
+
+.pai h1 {
+    color: rgb(27, 6, 121);
+}
+
+.filho {
+    background-color:rgb(132, 0, 255);
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.filho h2 {
+    color:rgb(45, 10, 78);
+}
