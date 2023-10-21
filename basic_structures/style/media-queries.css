@@ -1,0 +1,40 @@
+body {
+    background-color: lightpink;
+}
+
+@media screen and (max-width: 650px){
+    body{
+        background-color: lightseagreen;
+    }
+    p{
+        color: white;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        background-color: greenyellow;
+    }
+    p{
+        color: darkblue;
+    }
+}
+
+@media screen and (max-width: 450px){
+    body{
+        background-color: lightcoral;
+    }
+    p{
+        color: rgb(255, 0, 0);
+    }
+}
+
+@media screen and (max-width: 420px){
+    body{
+        background-color: lightblue;
+    }
+    p{
+        color: black;
+    }
+}
+
