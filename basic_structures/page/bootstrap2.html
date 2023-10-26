@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Bootstrap Page</title>
+    <style>
+        .header{
+            height: 50px;
+            background-color: rgb(20, 107, 158);
+        }
+        .col-sm-3 {
+            background-color: #e1a5f0;
+        }
+        h1 {
+            font-family: 'Segoe UI';
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 2px;
+            color: rgb(153, 56, 218);
+            text-shadow: 1px 1px 1px rgb(140, 0, 255);
+        }
+        button{  
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+        
+    </div>
+
+    <div class = "container-fluid">
+        <div class = "row content">
+            <div class = "col-sm-3">
+                <img src = "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" class = "img-responsive" alt = "Image" height = "150px" width="150px"><br>
+    
+                <ul class = "nav nav-pills nav-stacked">
+                    <li class = "active nav-item"><a class="nav-link" href = "#" aria-current = "page" >Home</a></li>
+                    <li class = "nav-item"><a class="nav-link" href = "#">About</a></li>
+                    <li class = "nav-item"><a class="nav-link" href = "#">Products</a></li>
+                    <li class = "nav-item"><a  class="nav-link" href = "#">Contact</a></li>
+                </ul>
+                <br>
+
+                <div class = "input-group">
+                    <input type = "text" name = "" id="" class="form-control" placeholder = "Search">
+                    <span class = "input-group-btn">
+                        <button class = "btn btn-default" type = "button">
+                            <span class = "glyphicon glyphicon-search"></span>
+                        </button>
+                </div>
+            </div>
+    
+            <div class = "col-sm-9">
+                <h1>Welcome to Our Website!</h1>
+                <hr>
+                <h2>I love food</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane on 25 Oct, 2023</h5>
+                <h5><span class ="label label-danger">Food</span> <span class ="label label-primary">Drinks</span></h5>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsum numquam nisi dolores esse quae natus modi. Dolorem doloribus repellat delectus vero blanditiis fuga sit unde, officia iure, magni explicabo.
+                </p>
+
+            </div>
+
+            <div class ="footer">
+            <button type = "button" class = "btn btn-success">Link to our WhatsApp</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
