@@ -1,0 +1,10 @@
+<style src = "heroes.component.css"></style>
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><img class = "img" src="{{hero.img}}" alt="{{hero.name}}" width="170" height="130"></div>
+<div class ="campos"><span class ="span">id: </span>{{hero.id}}</div>
+<div class ="campos"><span class = "span">power: </span>{{hero.power}}</div>
+<div>
+  <label class="name" for="name">Hero name: </label>
+  <input class = "input" id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
+
