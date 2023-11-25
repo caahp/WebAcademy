@@ -1,4 +1,4 @@
-<style src = "heroes.component.css"></style>
+<!-- <style src = "heroes.component.css"></style>
 <h2>{{hero.name | uppercase}} Details</h2>
 <div><img class = "img" src="{{hero.img}}" alt="{{hero.name}}" width="170" height="130"></div>
 <div class ="campos"><span class ="span">id: </span>{{hero.id}}</div>
@@ -6,5 +6,16 @@
 <div>
   <label class="name" for="name">Hero name: </label>
   <input class = "input" id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
+</div> -->
 
+<h2>My Heroes</h2>
+<ul class = "heroes">
+  <li *ngFor = "let hero of heroes">
+    <button type = "button" (click) = "onSelectHero(hero)">
+      <span class = "badge">{{hero.id}}</span>
+      <span class ="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-hero-detail [hero] = "selectedHero"></app-hero-detail>
