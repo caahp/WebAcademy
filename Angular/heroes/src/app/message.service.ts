@@ -15,9 +15,4 @@ export class MessageService {
   clear() {
     this.messages = [];
   }
-
-  show(){
-    alert(this.messages);
-  }
-
 }
