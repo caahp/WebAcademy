@@ -5,6 +5,7 @@ const connection = mysql.createConnection({
     user: 'root',
     password: 'root',
     database: 'webAcademy',
-})
+});
 
-module.exports = connection;z
+
+module.exports = connection;
