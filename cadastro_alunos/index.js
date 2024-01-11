@@ -1,25 +1,27 @@
 const express = require('express');
+const db = require('./db');
 const bodyParser = require('body-parser');
-const db = require('./db'); 
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
 
-// Initialize server
+const routes = require('./routes')
+
+db.connect(err => {
+  if (err) {
+    console.error('Erro ao conectar ao banco de dados:', err);
+    return;
+  }
+  console.log('Conectado ao banco de dados MySQL');
+});
+
+app.use('/', routes);
+
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
-
-app.post('/alunos', (req, res) => {
-    const aluno = req.body;
-    res.send(`Hello, ${aluno.nome}!!!`)
-});
-
-app.get('/', (req, res) => {
-    res.send("Welcome to our Website!");
-});
+  console.log(`Servidor rodando na porta: ${port}`)
+})
 
 
 
