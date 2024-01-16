@@ -16,6 +16,20 @@ router.get('/alunos', (req, res) => {
     });
 });
 
+router.get('/alunos/:id', (req, res) => {
+    const {id} = req.params
+    const query = `SELECT * FROM alunos WHERE id_aluno = ${id}`
+
+    db.query(query, (err, result) => {
+        if (err) {
+            res.status(500).json("Erro ao obter aluno");
+        }
+        else{
+            res.json(result);
+        }
+    });
+});
+
 // Alunos - Create Endpoint
 router.post('/alunos', (req, res) => {
     const { nome,idade } = req.body
@@ -74,6 +88,20 @@ router.get('/aulas', (req, res) => {
     });
 });
 
+router.get('/aulas/:id', (req, res) => {
+    const {id} = req.params
+    const query = `SELECT * FROM aulas WHERE id_aula = ${id}`
+
+    db.query(query, (err, result) => {
+        if (err) {
+            res.status(500).json("Erro ao obter aula");
+        }
+        else{
+            res.json(result);
+        }
+    });
+});
+
 // Aulas - Create Endpoint
 router.post('/aulas', (req, res) => {
     const { nome_aula, descricao } = req.body;
@@ -118,8 +146,8 @@ router.delete('/aulas/:id', (req, res) => {
     });
 });
 
-// AlunosAulas - Read Endpoint
-router.get('/alunosaulas', (req, res) => {
+// Inscrição - Read Endpoint
+router.get('/inscricao', (req, res) => {
     const query = "SELECT * FROM alunos_aulas"
 
     db.query(query, (err, result) => {
@@ -132,8 +160,23 @@ router.get('/alunosaulas', (req, res) => {
     });
 });
 
-// AlunosAulas - Create Endpoint
-router.post('/alunosaulas', (req, res) => {
+router.get('/inscricao/:id', (req, res) => {
+    const {id} = req.params
+    const query = `SELECT * FROM alunos_aulas WHERE id_aluno = ${id}`
+
+    db.query(query, (err, result) => {
+        if (err) {
+            res.status(500).json("Erro ao obter inscrição");
+        }
+        else{
+            res.json(result);
+        }
+    });
+});
+
+
+// Inscrição - Create Endpoint
+router.post('/inscricao', (req, res) => {
     const {id_aluno, id_aula}= req.body
     const query = `INSERT INTO alunos_aulas (id_aluno, id_aula) VALUES (${id_aluno}, ${id_aula})`;
 
@@ -147,8 +190,8 @@ router.post('/alunosaulas', (req, res) => {
     })
 });
 
-// AlunosAulas - Update Endpoint
-router.put('/alunosaulas/:id', (req, res) => {
+// Inscrição - Update Endpoint
+router.put('/inscricao/:id', (req, res) => {
     const {id} = req.params
     const query = `UPDATE alunos_aulas SET id_aluno = ${id_aluno}, id_aula = ${id_aula} WHERE id_aluno_aula = ${id}`;
 
@@ -161,8 +204,8 @@ router.put('/alunosaulas/:id', (req, res) => {
     });
 });
 
-// AlunosAulas - Delete Endpoint
-router.delete('/alunosaulas/:id', (req, res) => {
+// Inscrição - Delete Endpoint
+router.delete('/inscricao/:id', (req, res) => {
     const {id} = req.params
     const query = `DELETE FROM alunos_aulas WHERE id_aluno_aula = ${id}`;
 
